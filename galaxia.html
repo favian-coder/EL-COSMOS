@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Qué es una galaxia, qué tipos existen y cómo se comparan: espirales, elípticas e irregulares.">
+  <title>Galaxias | Cosmos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪐%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina con-lateral">
+    <header class="encabezado">
+      <nav class="barra-nav" aria-label="Navegación principal">
+        <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true"></span>Cosmos</a>
+        <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galaxia.html" aria-current="page">Galaxias</a></li>
+          <li><a href="vialactea.html">Vía Láctea</a></li>
+          <li><a href="planetas.html">Planetas</a></li>
+          <li><a href="estrellas.html">Estrellas</a></li>
+          <li><a href="satelites.html">Satélites</a></li>
+          <li><a href="trivias.html">Trivias</a></li>
+          <li><a href="inscribete.html">Inscríbete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <div class="contenedor seccion" id="inicio">
+        <h1>Galaxias: ciudades de estrellas</h1>
+        <p>Una galaxia es un enorme grupo de estrellas, gas y polvo que se mantiene unido por la gravedad. Cada galaxia puede tener desde millones hasta billones de estrellas, y el universo contiene cientos de miles de millones de galaxias.</p>
+
+        <ul class="indice" aria-label="Contenido de la página">
+          <li><a href="#tipos">Tipos de galaxias</a></li>
+          <li><a href="#comparar">Tabla comparativa</a></li>
+          <li><a href="#vecina">Nuestra vecina</a></li>
+        </ul>
+
+        <section id="tipos" aria-labelledby="titulo-tipos">
+          <h2 id="titulo-tipos">Tres formas de galaxia</h2>
+          <div class="rejilla-tarjetas">
+            <article class="tarjeta">
+              <h3>Espirales</h3>
+              <p>Tienen un centro brillante y brazos curvos que giran como un remolino. Aquí nacen muchas estrellas nuevas. La Vía Láctea es una galaxia espiral.</p>
+            </article>
+            <article class="tarjeta">
+              <h3>Elípticas</h3>
+              <p>Tienen forma ovalada, como un balón de rugby o una esfera. Tienen poco gas, así que casi no se forman estrellas nuevas.</p>
+            </article>
+            <article class="tarjeta">
+              <h3>Irregulares</h3>
+              <p>No tienen una forma definida. Suelen ser más pequeñas y a veces su aspecto cambió por el choque o el paso cerca de otras galaxias.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="seccion" id="comparar" aria-labelledby="titulo-comparar">
+          <h2 id="titulo-comparar">Compáralas</h2>
+          <div class="tabla-envoltorio">
+            <table>
+              <caption>Tipos de galaxias</caption>
+              <thead>
+                <tr><th scope="col">Tipo</th><th scope="col">Forma</th><th scope="col">Ejemplo</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Espiral</th><td>Disco con brazos curvos</td><td>Andrómeda</td></tr>
+                <tr><th scope="row">Elíptica</th><td>Ovalada o esférica</td><td>Messier 87 (M87)</td></tr>
+                <tr><th scope="row">Irregular</th><td>Sin forma definida</td><td>Gran Nube de Magallanes</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="seccion" id="vecina" aria-labelledby="titulo-vecina">
+          <div class="dos-columnas">
+            <div>
+              <h2 id="titulo-vecina">Nuestra gran vecina</h2>
+              <p>La galaxia espiral de Andrómeda es la gran galaxia más cercana a la Vía Láctea. Está a unos 2,5 millones de años luz, y los científicos esperan que ambas galaxias se fusionen dentro de miles de millones de años.</p>
+            </div>
+            <figure class="figura-destacada">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Andromeda_Galaxy_(with_h-alpha).jpg?width=800" alt="Fotografía de la galaxia de Andrómeda" loading="lazy">
+          <figcaption>Las galaxias son sistemas de estrellas, gas y polvo. Imagen: NASA.</figcaption>
+        </figure>
+          </div>
+        </section>
+
+        <p class="volver"><a href="#inicio">Volver arriba</a> · <a href="index.html">Volver al inicio</a></p>
+      </div>
+    </main>
+
+    <aside class="lateral" aria-label="Datos curiosos">
+      <section class="dato">
+        <h2>¿Sabías que?</h2>
+        <p>Cuando miras la galaxia de Andrómeda, ves luz que salió de ella hace unos 2,5 millones de años.</p>
+        <p>Un año luz es la distancia que recorre la luz en un año.</p>
+      </section>
+    </aside>
+
+    <footer class="pie" id="pie-pagina"></footer>
+  </div>
+
+  <script src="js/pie.js" defer></script>
+  <script src="js/comun.js" defer></script>
+</body>
+</html>

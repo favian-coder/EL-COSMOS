@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Qué son las estrellas, por qué tienen distintos colores y cómo es su ciclo de vida, empezando por el Sol.">
+  <title>Las estrellas | Cosmos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪐%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina con-lateral">
+    <header class="encabezado">
+      <nav class="barra-nav" aria-label="Navegación principal">
+        <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true"></span>Cosmos</a>
+        <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galaxia.html">Galaxias</a></li>
+          <li><a href="vialactea.html">Vía Láctea</a></li>
+          <li><a href="planetas.html">Planetas</a></li>
+          <li><a href="estrellas.html" aria-current="page">Estrellas</a></li>
+          <li><a href="satelites.html">Satélites</a></li>
+          <li><a href="trivias.html">Trivias</a></li>
+          <li><a href="inscribete.html">Inscríbete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <div class="contenedor seccion" id="inicio">
+        <h1>Estrellas: motores de luz</h1>
+        <p>Una estrella es una gigantesca bola de gas muy caliente, formada sobre todo por hidrógeno y helio. En su interior ocurre la fusión nuclear, que produce la luz y el calor que vemos desde lejos.</p>
+
+        <ul class="indice" aria-label="Contenido de la página">
+          <li><a href="#sol">Nuestra estrella</a></li>
+          <li><a href="#colores">Colores</a></li>
+          <li><a href="#vida">Ciclo de vida</a></li>
+        </ul>
+
+        <section id="sol" aria-labelledby="titulo-sol">
+          <h2 id="titulo-sol">El Sol, nuestra estrella</h2>
+          <div class="dos-columnas">
+            <div>
+              <p>El Sol es una estrella común, pero para nosotros es especial: su luz hace posible la vida en la Tierra. Tiene unos 4.600 millones de años y su ancho equivale a unas 109 Tierras puestas en fila.</p>
+              <dl class="ficha">
+                <div><dt>Diámetro</dt><dd>1,39 millones de km</dd></div>
+                <div><dt>Temperatura en la superficie</dt><dd>Unos 5.500 °C</dd></div>
+                <div><dt>Edad</dt><dd>4.600 millones de años</dd></div>
+              </dl>
+            </div>
+            <figure class="figura-destacada">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg?width=800" alt="Fotografía del Sol" loading="lazy">
+          <figcaption>El Sol es la estrella más cercana a la Tierra. Imagen: NASA.</figcaption>
+        </figure>
+          </div>
+        </section>
+
+        <section class="seccion" id="colores" aria-labelledby="titulo-colores">
+          <h2 id="titulo-colores">¿Por qué tienen distintos colores?</h2>
+          <p>El color depende de la temperatura: las estrellas más calientes se ven azules y las más frías, rojizas.</p>
+          <div class="tabla-envoltorio">
+            <table>
+              <caption>Colores de las estrellas</caption>
+              <thead>
+                <tr><th scope="col">Color</th><th scope="col">Temperatura en la superficie</th><th scope="col">Ejemplo</th></tr>
+              </thead>
+              <tbody>
+                <tr><th scope="row">Azul</th><td>Más de 10.000 °C</td><td>Rigel</td></tr>
+                <tr><th scope="row">Blanca</th><td>Entre 7.500 y 10.000 °C</td><td>Sirio</td></tr>
+                <tr><th scope="row">Amarilla</th><td>Entre 5.000 y 6.000 °C</td><td>El Sol</td></tr>
+                <tr><th scope="row">Naranja</th><td>Entre 3.500 y 5.000 °C</td><td>Arturo</td></tr>
+                <tr><th scope="row">Roja</th><td>Menos de 3.500 °C</td><td>Betelgeuse</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="seccion" id="vida" aria-labelledby="titulo-vida">
+          <h2 id="titulo-vida">Nacen, brillan y se apagan</h2>
+          <p>Las estrellas como el Sol siguen estas etapas:</p>
+          <ol class="etapas">
+            <li><strong>Nebulosa.</strong> Una nube de gas y polvo se junta por la gravedad.</li>
+            <li><strong>Protoestrella.</strong> La nube se calienta y se aplasta hasta encender una nueva estrella.</li>
+            <li><strong>Estrella adulta.</strong> Brilla durante miles de millones de años. El Sol está aquí.</li>
+            <li><strong>Gigante roja.</strong> Cuando se acaba el hidrógeno, la estrella se hincha y se enfría.</li>
+            <li><strong>Enana blanca.</strong> Expulsa sus capas exteriores y queda un núcleo pequeño y caliente que se apaga poco a poco.</li>
+          </ol>
+          <p class="volver">Las estrellas mucho más grandes que el Sol terminan de otra forma: explotan como una supernova.</p>
+          <div class="dos-columnas">
+            <figure class="figura-destacada">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Eagle_nebula_pillars.jpg?width=800" alt="Fotografía de los Pilares de la Creación, en la nebulosa del Águila" loading="lazy">
+          <figcaption>Una nebulosa es una nube de gas y polvo. Imagen: NASA.</figcaption>
+        </figure>
+            <figure class="figura-destacada">
+          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Crab_Nebula.jpg?width=800" alt="Fotografía de la nebulosa del Cangrejo, restos de una supernova" loading="lazy">
+          <figcaption>Una supernova es la explosión de una estrella masiva. Imagen: NASA.</figcaption>
+        </figure>
+          </div>
+        </section>
+
+        <p class="volver"><a href="#inicio">Volver arriba</a> · <a href="index.html">Volver al inicio</a></p>
+      </div>
+    </main>
+
+    <aside class="lateral" aria-label="Datos curiosos">
+      <section class="dato">
+        <h2>¿Sabías que?</h2>
+        <p>Cuando miras una estrella, ves luz del pasado: la luz tarda años, o miles de años, en llegar hasta aquí.</p>
+        <p>Las estrellas más pequeñas, las enanas rojas, pueden brillar durante billones de años.</p>
+      </section>
+    </aside>
+
+    <footer class="pie" id="pie-pagina"></footer>
+  </div>
+
+  <script src="js/pie.js" defer></script>
+  <script src="js/comun.js" defer></script>
+</body>
+</html>

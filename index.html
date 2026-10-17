@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Cosmos: plataforma educativa interactiva sobre el Sistema Solar, los planetas, las estrellas y las galaxias.">
+  <title>Inicio | Cosmos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪐%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina con-lateral">
+    <header class="encabezado">
+      <nav class="barra-nav" aria-label="Navegación principal">
+        <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true"></span>Cosmos</a>
+        <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="galaxia.html">Galaxias</a></li>
+          <li><a href="vialactea.html">Vía Láctea</a></li>
+          <li><a href="planetas.html">Planetas</a></li>
+          <li><a href="estrellas.html">Estrellas</a></li>
+          <li><a href="satelites.html">Satélites</a></li>
+          <li><a href="trivias.html">Trivias</a></li>
+          <li><a href="inscribete.html">Inscríbete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero contenedor" aria-labelledby="titulo-hero">
+        <div>
+          <h1 id="titulo-hero">Un viaje por el Sistema Solar y más allá</h1>
+          <p>Cosmos es una plataforma para descubrir los planetas, las estrellas y las galaxias. Explora las fichas, mira el video y pon a prueba lo que aprendiste.</p>
+          <div class="acciones">
+            <a class="boton boton-primario" href="planetas.html">Ver los planetas</a>
+            <a class="boton boton-secundario" href="trivias.html">Jugar a la trivia</a>
+          </div>
+        </div>
+        <div class="orrery" role="img" aria-label="Animación del Sol con los ocho planetas girando en sus órbitas">
+          <span class="sol"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.1); --d: 6px; --c: #b5a49a; --t: 6s;"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.15); --d: 9px; --c: #e6c27a; --t: 9s;"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.2); --d: 10px; --c: #4f9be8; --t: 12s;"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.25); --d: 8px; --c: #d1603d; --t: 16s;"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.31); --d: 16px; --c: #d9a066; --t: 26s;"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.37); --d: 14px; --c: #e3cf9b; --t: 36s;"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.43); --d: 11px; --c: #8fe0e8; --t: 48s;"></span>
+          <span class="orbita" style="--r: calc(var(--u) * 0.49); --d: 11px; --c: #4a6fe0; --t: 60s;"></span>
+        </div>
+      </section>
+
+      <section class="seccion contenedor" aria-labelledby="titulo-explorar">
+        <h2 id="titulo-explorar">¿Qué quieres explorar?</h2>
+        <div class="rejilla-tarjetas">
+        <article class="tarjeta">
+          <div class="tarjeta-imagen"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/M101_hires_STScI-PRC2006-10a.jpg?width=600" alt="Fotografía de la galaxia espiral M101" loading="lazy"></div>
+          <h3>Galaxias</h3>
+          <p>Descubre qué es una galaxia y cuántas formas pueden tener.</p>
+          <a class="boton boton-secundario" href="galaxia.html">Explorar</a>
+        </article>
+        <article class="tarjeta">
+          <div class="tarjeta-imagen"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Hubble_ultra_deep_field.jpg?width=600" alt="Fotografía del espacio profundo tomada por el telescopio Hubble" loading="lazy"></div>
+          <h3>La Vía Láctea</h3>
+          <p>Conoce la galaxia en la que vive nuestro Sistema Solar.</p>
+          <a class="boton boton-secundario" href="vialactea.html">Explorar</a>
+        </article>
+        <article class="tarjeta">
+          <div class="tarjeta-imagen"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Solar_System_Montage_-_GPN-2000-000454.jpg?width=600" alt="Montaje de fotografías de los ocho planetas del Sistema Solar" loading="lazy"></div>
+          <h3>Los planetas</h3>
+          <p>Filtra, compara y abre la ficha de cada uno de los ocho planetas.</p>
+          <a class="boton boton-secundario" href="planetas.html">Explorar</a>
+        </article>
+        <article class="tarjeta">
+          <div class="tarjeta-imagen"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Sun_by_the_Atmospheric_Imaging_Assembly_of_NASA%27s_Solar_Dynamics_Observatory_-_20100819.jpg?width=600" alt="Fotografía del Sol" loading="lazy"></div>
+          <h3>Las estrellas</h3>
+          <p>Del Sol a las supernovas: cómo nacen, brillan y se apagan.</p>
+          <a class="boton boton-secundario" href="estrellas.html">Explorar</a>
+        </article>
+        <article class="tarjeta">
+          <div class="tarjeta-imagen"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/FullMoon2010.jpg?width=600" alt="Fotografía de la Luna" loading="lazy"></div>
+          <h3>Los satélites</h3>
+          <p>Lunas de todos los tamaños, desde Fobos hasta Ganímedes.</p>
+          <a class="boton boton-secundario" href="satelites.html">Explorar</a>
+        </article>
+        </div>
+      </section>
+
+      <section class="seccion contenedor" aria-labelledby="titulo-video">
+        <h2 id="titulo-video">Mira el video</h2>
+        <p>Un recorrido en video por el Sistema Solar para complementar lo que lees en cada sección.</p>
+        <figure class="video-contenedor">
+          <video controls preload="metadata">
+            <source src="videos/sistema-solar.mp4" type="video/mp4">
+            Tu navegador no puede reproducir este video. Puedes verlo en
+            <a href="https://spaceplace.nasa.gov/menu/videos/" target="_blank" rel="noopener">la videoteca de NASA Space Place</a>.
+          </video>
+          <figcaption>Video educativo sobre el Sistema Solar. Creditos a 
+            <a href="https://www.youtube.com/@HappyLearningES" target="_blank" rel="noopener">HappyLearningES</a>.</figcaption>
+        </figure>
+      </section>
+
+      <section class="seccion contenedor" aria-label="Invitaciones">
+        <div class="banda">
+          <div>
+            <h2>¿Listo para el reto?</h2>
+            <p>Responde diez preguntas sobre el cosmos o inscríbete para recibir novedades.</p>
+          </div>
+          <div class="acciones">
+            <a class="boton boton-primario" href="trivias.html">Empezar la trivia</a>
+            <a class="boton boton-secundario" href="inscribete.html">Inscribirme</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="lateral" aria-label="Datos curiosos">
+      <section class="dato">
+        <h2>¿Sabías que?</h2>
+        <p>El Sol contiene el 99,86 % de toda la masa del Sistema Solar.</p>
+        <p>Si el Sol fuera una puerta, cabrían más de un millón de Tierras dentro de él.</p>
+        <p>La luz del Sol tarda unos 8 minutos en llegar a la Tierra.</p>
+      </section>
+    </aside>
+
+    <footer class="pie" id="pie-pagina"></footer>
+  </div>
+
+  <script src="js/pie.js" defer></script>
+  <script src="js/comun.js" defer></script>
+</body>
+</html>

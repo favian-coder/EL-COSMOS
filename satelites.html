@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lunas del Sistema Solar: la Luna, Fobos, Ío, Europa, Ganímedes, Titán y más, con filtro por planeta.">
+  <title>Los satélites | Cosmos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪐%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina">
+    <header class="encabezado">
+      <nav class="barra-nav" aria-label="Navegación principal">
+        <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true"></span>Cosmos</a>
+        <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galaxia.html">Galaxias</a></li>
+          <li><a href="vialactea.html">Vía Láctea</a></li>
+          <li><a href="planetas.html">Planetas</a></li>
+          <li><a href="estrellas.html">Estrellas</a></li>
+          <li><a href="satelites.html" aria-current="page">Satélites</a></li>
+          <li><a href="trivias.html">Trivias</a></li>
+          <li><a href="inscribete.html">Inscríbete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <div class="contenedor seccion">
+        <h1>Lunas y satélites naturales</h1>
+        <p>Un satélite natural es un cuerpo que gira alrededor de un planeta. Mercurio y Venus no tienen ninguno; la Tierra tiene uno, y los gigantes del Sistema Solar tienen decenas.</p>
+
+        <div class="controles">
+          <label class="selector" for="filtro-planeta">Mostrar lunas de
+            <select id="filtro-planeta">
+              <option value="todos">Todos los planetas</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="contador" id="contador-lunas" aria-live="polite"></p>
+        <section class="rejilla-planetas" id="cuadricula-lunas" aria-label="Lista de lunas"></section>
+
+        <p class="volver"><small>Imágenes de las lunas: NASA y Wikimedia Commons (fotografía de la Luna: Gregory H. Revera, CC BY-SA).</small></p>
+        <p class="volver"><a href="index.html">Volver al inicio</a></p>
+      </div>
+    </main>
+
+    <footer class="pie" id="pie-pagina"></footer>
+  </div>
+
+  <script src="js/pie.js" defer></script>
+  <script src="js/comun.js" defer></script>
+  <script src="js/satelites.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulario de inscripción de Cosmos con validación en el navegador.">
+  <title>Inscríbete | Cosmos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪐%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina">
+    <header class="encabezado">
+      <nav class="barra-nav" aria-label="Navegación principal">
+        <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true"></span>Cosmos</a>
+        <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galaxia.html">Galaxias</a></li>
+          <li><a href="vialactea.html">Vía Láctea</a></li>
+          <li><a href="planetas.html">Planetas</a></li>
+          <li><a href="estrellas.html">Estrellas</a></li>
+          <li><a href="satelites.html">Satélites</a></li>
+          <li><a href="trivias.html">Trivias</a></li>
+          <li><a href="inscribete.html" aria-current="page">Inscríbete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <div class="contenedor seccion">
+        <h1>Inscríbete en Cosmos</h1>
+        <p>Déjanos tus datos para recibir novedades sobre astronomía. Los campos marcados con * son obligatorios.</p>
+
+        <form class="formulario" id="form-inscripcion" action="#" method="post" novalidate>
+          <p class="resumen-error" id="resumen-error" role="alert" hidden></p>
+
+          <div class="campo">
+            <label for="nombre">Nombre completo *</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Ej: Carolina Pérez" aria-describedby="error-nombre">
+            <p class="error" id="error-nombre" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="correo">Correo electrónico *</label>
+            <input type="email" id="correo" name="correo" autocomplete="email" placeholder="Ej: correo@ejemplo.com" maxlength="60" aria-describedby="error-correo">
+            <p class="error" id="error-correo" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="telefono">Teléfono (opcional)</label>
+            <input type="tel" id="telefono" name="telefono" autocomplete="tel" inputmode="numeric" maxlength="12" placeholder="Ej: 0424-1234567" aria-describedby="ayuda-telefono error-telefono">
+            <span class="ayuda" id="ayuda-telefono">Solo números. Debe empezar por 0412, 0414, 0416, 0424 o 0426 (el guion se agrega solo).</span>
+            <p class="error" id="error-telefono" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label for="nivel">Nivel de estudio *</label>
+            <select id="nivel" name="nivel" aria-describedby="error-nivel">
+              <option value="">-- Elige una opción --</option>
+              <option value="primaria">Primaria</option>
+              <option value="media">Educación media</option>
+              <option value="universitario">Universitario</option>
+              <option value="otro">Otro</option>
+            </select>
+            <p class="error" id="error-nivel" aria-live="polite"></p>
+          </div>
+
+          <fieldset class="campo">
+            <legend>¿Qué te interesa? *</legend>
+            <div class="opciones-check">
+              <label><input type="checkbox" name="intereses" value="planetas"> Planetas</label>
+              <label><input type="checkbox" name="intereses" value="estrellas"> Estrellas</label>
+              <label><input type="checkbox" name="intereses" value="galaxias"> Galaxias</label>
+              <label><input type="checkbox" name="intereses" value="lunas"> Lunas</label>
+            </div>
+            <p class="error" id="error-intereses" aria-live="polite"></p>
+          </fieldset>
+
+          <div class="campo">
+            <label for="mensaje">Cuéntanos qué quieres aprender *</label>
+            <textarea id="mensaje" name="mensaje" rows="4" maxlength="320" aria-describedby="error-mensaje"></textarea>
+            <span class="contador-texto" id="contador-mensaje">0 / 300</span>
+            <p class="error" id="error-mensaje" aria-live="polite"></p>
+          </div>
+
+          <div class="campo">
+            <label class="opciones-check"><input type="checkbox" id="terminos" name="terminos"> Acepto recibir información de Cosmos *</label>
+            <p class="error" id="error-terminos" aria-live="polite"></p>
+          </div>
+
+          <div class="acciones">
+            <button class="boton boton-primario" type="submit">Inscribirme</button>
+            <button class="boton boton-secundario" type="reset">Limpiar</button>
+          </div>
+        </form>
+
+        <section class="exito" id="mensaje-exito" aria-live="polite" hidden>
+          <h2 tabindex="-1">¡Listo, <span id="nombre-exito"></span>!</h2>
+          <p style="margin-inline: auto;">Tu inscripción fue registrada en esta página. Gracias por explorar el cosmos con nosotros.</p>
+          <div class="acciones" style="justify-content: center;">
+            <a class="boton boton-primario" href="planetas.html">Explorar planetas</a>
+            <button class="boton boton-secundario" id="otra-inscripcion" type="button">Inscribir a otra persona</button>
+          </div>
+        </section>
+
+        <p class="volver"><a href="index.html">Volver al inicio</a></p>
+      </div>
+    </main>
+
+    <footer class="pie" id="pie-pagina"></footer>
+  </div>
+
+  <script src="js/pie.js" defer></script>
+  <script src="js/comun.js" defer></script>
+  <script src="js/formulario.js" defer></script>
+</body>
+</html>

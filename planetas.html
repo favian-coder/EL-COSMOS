@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Los ocho planetas del Sistema Solar con filtros, orden, fichas detalladas y tabla comparativa.">
+  <title>Los planetas | Cosmos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪐%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina">
+    <header class="encabezado">
+      <nav class="barra-nav" aria-label="Navegación principal">
+        <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true"></span>Cosmos</a>
+        <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galaxia.html">Galaxias</a></li>
+          <li><a href="vialactea.html">Vía Láctea</a></li>
+          <li><a href="planetas.html" aria-current="page">Planetas</a></li>
+          <li><a href="estrellas.html">Estrellas</a></li>
+          <li><a href="satelites.html">Satélites</a></li>
+          <li><a href="trivias.html">Trivias</a></li>
+          <li><a href="inscribete.html">Inscríbete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <div class="contenedor seccion">
+        <h1>Los ocho planetas</h1>
+        <p>Elige un tipo de planeta, cambia el orden y abre la ficha de cada uno para ver su masa, su distancia al Sol y más datos.</p>
+
+        <div class="controles">
+          <div class="filtros" role="group" aria-label="Filtrar por tipo de planeta">
+            <button class="filtro" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+            <button class="filtro" type="button" data-filtro="rocoso" aria-pressed="false">Rocosos</button>
+            <button class="filtro" type="button" data-filtro="gaseoso" aria-pressed="false">Gigantes gaseosos</button>
+            <button class="filtro" type="button" data-filtro="helado" aria-pressed="false">Gigantes helados</button>
+          </div>
+          <label class="selector" for="orden">Ordenar por
+            <select id="orden">
+              <option value="distancia">Distancia al Sol</option>
+              <option value="tamano">Tamaño</option>
+              <option value="nombre">Nombre</option>
+            </select>
+          </label>
+        </div>
+
+        <p class="contador" id="contador-planetas" aria-live="polite"></p>
+        <section class="rejilla-planetas" id="cuadricula-planetas" aria-label="Lista de planetas"></section>
+
+        <section class="seccion" aria-labelledby="titulo-tabla">
+          <h2 id="titulo-tabla">Tabla comparativa</h2>
+          <div class="tabla-envoltorio">
+            <table>
+              <caption>Los planetas ordenados desde el Sol</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Planeta</th>
+                  <th scope="col">Tipo</th>
+                  <th scope="col">Distancia al Sol</th>
+                  <th scope="col">Diámetro</th>
+                  <th scope="col">Masa</th>
+                </tr>
+              </thead>
+              <tbody id="tabla-planetas-cuerpo"></tbody>
+            </table>
+          </div>
+          <p class="volver"><small>Imágenes de los planetas: NASA.</small></p>
+        </section>
+
+        <p class="volver"><a href="index.html">Volver al inicio</a></p>
+      </div>
+
+      <dialog class="modal" id="modal-planeta" aria-labelledby="modal-titulo">
+        <div class="modal-contenido" id="modal-cuerpo"></div>
+        <form method="dialog" class="modal-cerrar" style="padding: 0 1.5rem 1.5rem;">
+          <button class="boton boton-primario" type="submit">Cerrar</button>
+        </form>
+      </dialog>
+    </main>
+
+    <footer class="pie" id="pie-pagina"></footer>
+  </div>
+
+  <script src="js/pie.js" defer></script>
+  <script src="js/comun.js" defer></script>
+  <script src="js/datos.js" defer></script>
+  <script src="js/planetas.js" defer></script>
+</body>
+</html>

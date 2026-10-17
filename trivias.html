@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pon a prueba lo que sabes del Sistema Solar con una trivia interactiva de diez preguntas.">
+  <title>Trivias | Cosmos</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🪐%3C/text%3E%3C/svg%3E">
+
+  <!-- Fuentes de Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+  <div class="pagina">
+    <header class="encabezado">
+      <nav class="barra-nav" aria-label="Navegación principal">
+        <a class="marca" href="index.html"><span class="marca-icono" aria-hidden="true"></span>Cosmos</a>
+        <button class="menu-boton" id="menu-boton" type="button" aria-expanded="false" aria-controls="menu-principal">Menú</button>
+        <ul class="menu" id="menu-principal">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="galaxia.html">Galaxias</a></li>
+          <li><a href="vialactea.html">Vía Láctea</a></li>
+          <li><a href="planetas.html">Planetas</a></li>
+          <li><a href="estrellas.html">Estrellas</a></li>
+          <li><a href="satelites.html">Satélites</a></li>
+          <li><a href="trivias.html" aria-current="page">Trivias</a></li>
+          <li><a href="inscribete.html">Inscríbete</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <div class="contenedor seccion">
+        <h1>Trivia del cosmos</h1>
+        <p>Responde diez preguntas sobre el Sistema Solar. Después de cada una verás la respuesta correcta y una explicación.</p>
+
+        <section class="trivia" id="trivia-caja" aria-labelledby="trivia-pregunta" aria-live="polite">
+          <div class="progreso"><div class="barra" id="trivia-barra"></div></div>
+          <p id="trivia-contador"></p>
+          <h2 id="trivia-pregunta"></h2>
+          <div class="opciones" id="trivia-opciones"></div>
+          <p class="explicacion" id="trivia-explicacion" hidden></p>
+          <button class="boton boton-primario" id="trivia-siguiente" type="button" hidden>Siguiente pregunta</button>
+        </section>
+
+        <section class="trivia resultado" id="trivia-resultado" aria-labelledby="titulo-resultado" hidden>
+          <h2 id="titulo-resultado">Tu resultado</h2>
+          <p class="puntaje" id="trivia-puntaje"></p>
+          <p id="trivia-mensaje" style="margin-inline: auto;"></p>
+          <div class="acciones" style="justify-content: center;">
+            <button class="boton boton-primario" id="trivia-reiniciar" type="button">Jugar otra vez</button>
+            <a class="boton boton-secundario" href="planetas.html">Repasar los planetas</a>
+          </div>
+        </section>
+
+        <p class="volver"><a href="index.html">Volver al inicio</a></p>
+      </div>
+    </main>
+
+    <footer class="pie" id="pie-pagina"></footer>
+  </div>
+
+  <script src="js/pie.js" defer></script>
+  <script src="js/comun.js" defer></script>
+  <script src="js/trivia.js" defer></script>
+</body>
+</html>

@@ -1,12 +1,7 @@
-// =========================================================
-// COSMOS · Pie de página común a todas las páginas
-// EDITA AQUÍ UNA SOLA VEZ y el cambio se ve en las 8 páginas.
-// Cada HTML solo tiene: <footer class="pie" id="pie-pagina"></footer>
-// =========================================================
 
 const datosPie = {
   titulo: "© 2026 Cosmos · Plataforma educativa del Sistema Solar",
-  autores: "[Nombre 1], [Nombre 2] y ",          // <- pon aquí los nombres reales
+  autores: "[Roger Veloz], [Santiago Villaruel] y [Favian Vallestero] ",          // <- pon aquí los nombres reales
   materia: "Electiva I · UPT de Valencia",
   creditosImagenes:
     'Imágenes: NASA y ESA/Hubble (dominio público o de uso libre), ' +

@@ -1,9 +1,3 @@
-// =========================================================
-// COSMOS · trivias.html
-// Preguntas guardadas en un arreglo de objetos; la interfaz
-// se genera con el DOM y responde a los clics del usuario.
-// =========================================================
-
 const preguntas = [
   {
     pregunta: "¿Qué planeta está más cerca del Sol?",
@@ -89,7 +83,6 @@ let indice = 0;
 let puntos = 0;
 let respondida = false;
 
-// Mezcla las preguntas (algoritmo de Fisher-Yates)
 function mezclar(lista) {
   const copia = [...lista];
   for (let i = copia.length - 1; i > 0; i--) {

@@ -1,10 +1,3 @@
-// =========================================================
-// COSMOS · Datos de los planetas
-// La información NO está escrita en el HTML: vive en este
-// arreglo de objetos y JavaScript la inyecta en la página.
-// Imágenes: fotografías reales de la NASA (dominio público) alojadas en Wikimedia Commons
-// =========================================================
-
 const RUTA_NASA = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 
 const planetas = [
@@ -146,14 +139,12 @@ const planetas = [
   }
 ];
 
-// Nombres legibles de cada tipo de planeta
 const etiquetasTipo = {
   rocoso: "Planeta rocoso",
   gaseoso: "Gigante gaseoso",
   helado: "Gigante helado"
 };
 
-// ---------- Funciones de formato reutilizables ----------
 const SUPERINDICES = { 0: "⁰", 1: "¹", 2: "²", 3: "³", 4: "⁴", 5: "⁵", 6: "⁶", 7: "⁷", 8: "⁸", 9: "⁹" };
 
 function aSuperindice(numero) {
@@ -163,14 +154,12 @@ function aSuperindice(numero) {
     .join("");
 }
 
-// 5.97e24  ->  "5,97 × 10²⁴ kg"
 function formatearMasa(kg) {
   const exponente = Math.floor(Math.log10(kg));
   const base = (kg / Math.pow(10, exponente)).toFixed(2).replace(".", ",");
   return base + " × 10" + aSuperindice(exponente) + " kg";
 }
 
-// 1434  ->  "1.434 millones de km"
 function formatearDistancia(millones) {
   return millones.toLocaleString("es-VE") + " millones de km";
 }

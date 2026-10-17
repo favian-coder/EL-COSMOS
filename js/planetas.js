@@ -1,9 +1,3 @@
-// =========================================================
-// COSMOS · planetas.html
-// Genera la interfaz recorriendo el arreglo `planetas` (datos.js)
-// Eventos: filtros por tipo, orden, ventana modal con la ficha
-// =========================================================
-
 const contenedor = document.getElementById("cuadricula-planetas");
 const contador = document.getElementById("contador-planetas");
 const botonesFiltro = document.querySelectorAll("[data-filtro]");
@@ -15,7 +9,6 @@ const cuerpoTabla = document.getElementById("tabla-planetas-cuerpo");
 let filtroActual = "todos";
 let ordenActual = "distancia";
 
-// Imagen oficial de la NASA; si no carga, se dibuja una esfera con el color del planeta
 function crearVisual(planeta) {
   const caja = document.createElement("div");
   caja.className = "visual";
@@ -62,7 +55,6 @@ function crearTarjeta(planeta) {
   return tarjeta;
 }
 
-// Devuelve los planetas que cumplen el filtro, ya ordenados
 function obtenerVisibles() {
   const filtrados = planetas.filter(
     (planeta) => filtroActual === "todos" || planeta.tipo === filtroActual
@@ -91,7 +83,6 @@ function cambiarFiltro(boton) {
   mostrarPlanetas();
 }
 
-// ---------- Ventana modal con la ficha detallada ----------
 function abrirModal(id) {
   const planeta = planetas.find((p) => p.id === id);
   if (!planeta) return;
@@ -118,7 +109,6 @@ function abrirModal(id) {
   modal.showModal();
 }
 
-// ---------- Tabla comparativa (también generada con JS) ----------
 function mostrarTabla() {
   const ordenados = [...planetas].sort((a, b) => a.distanciaMkm - b.distanciaMkm);
   ordenados.forEach((planeta) => {
@@ -134,7 +124,6 @@ function mostrarTabla() {
   });
 }
 
-// ---------- Eventos ----------
 botonesFiltro.forEach((boton) => boton.addEventListener("click", () => cambiarFiltro(boton)));
 
 selectorOrden.addEventListener("change", () => {
@@ -142,11 +131,9 @@ selectorOrden.addEventListener("change", () => {
   mostrarPlanetas();
 });
 
-// Cerrar al hacer clic fuera de la ficha (sobre el fondo oscuro)
 modal.addEventListener("click", (evento) => {
   if (evento.target === modal) modal.close();
 });
 
-// ---------- Inicio ----------
 mostrarPlanetas();
 mostrarTabla();

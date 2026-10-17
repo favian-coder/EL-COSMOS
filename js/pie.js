@@ -1,15 +1,13 @@
-
 const datosPie = {
   titulo: "© 2026 Cosmos · Plataforma educativa del Sistema Solar",
-  autores: "[Roger Veloz], [Santiago Villaruel] y [Favian Vallestero] ",          // <- pon aquí los nombres reales
+  autores: "Roger Veloz, Santiago Villarruel y Favian Vallestero",
   materia: "Electiva I · UPT de Valencia",
   creditosImagenes:
-    'Imágenes: NASA y ESA/Hubble (dominio público o de uso libre), ' +
-    '<a href="https://commons.wikimedia.org" target="_blank" rel="noopener"></a>. ' +
+    'Imágenes: NASA y ESA/Hubble (dominio público o de uso libre). ' +
     "Los créditos pertenecen a la NASA; este sitio es un proyecto educativo y no está afiliado ni respaldado por la NASA. " +
     'Consulta las <a href="https://spaceplace.nasa.gov/image-use" target="_blank" rel="noopener">normas de uso de imágenes</a>.',
   redes: [
-    { nombre: "Instagram", url: "https://www.instagram.com" },   // <- pon tus perfiles
+    { nombre: "Instagram", url: "https://www.instagram.com" },
     { nombre: "YouTube", url: "https://www.youtube.com" },
     { nombre: "X", url: "https://x.com" }
   ]

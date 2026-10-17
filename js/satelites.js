@@ -1,9 +1,3 @@
-// =========================================================
-// COSMOS · satelites.html
-// Arreglo de objetos con lunas del Sistema Solar + filtro por planeta
-// Fotografías reales (NASA, dominio público) vía Wikimedia Commons; si una no carga, esfera de color
-// =========================================================
-
 const RUTA = "https://commons.wikimedia.org/wiki/Special:FilePath/";
 
 const lunas = [
@@ -161,7 +155,6 @@ function mostrarLunas() {
     visibles.length === 1 ? "Mostrando 1 luna" : "Mostrando " + visibles.length + " lunas";
 }
 
-// Opciones del selector construidas a partir de los datos
 function llenarSelector() {
   const nombres = [...new Set(lunas.map((luna) => luna.planeta))];
   nombres.forEach((nombre) => {

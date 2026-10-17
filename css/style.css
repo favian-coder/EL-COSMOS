@@ -1,12 +1,5 @@
-/* =========================================================
-   COSMOS · Plataforma educativa del Sistema Solar
-   Hoja de estilos compartida por todas las páginas
-   Estrategia: Mobile-First (base = móvil, @media min-width = pantallas mayores)
-   ========================================================= */
-
-/* ---------- 1. VARIABLES (Custom Properties) ---------- */
 :root {
-  /* Paleta galáctica */
+
   --noche: #0a0e2b;
   --noche-2: #131a48;
   --noche-3: #1d2663;
@@ -18,25 +11,21 @@
   --texto-suave: #b3b9e6;
   --borde: rgba(160, 170, 255, 0.22);
 
-  /* Tipografía */
   --fuente-titulo: "Baloo 2", "Trebuchet MS", sans-serif;
   --fuente-texto: "Nunito", "Segoe UI", sans-serif;
 
-  /* Espaciados */
   --espacio-1: 0.5rem;
   --espacio-2: 1rem;
   --espacio-3: 1.5rem;
   --espacio-4: 2.5rem;
   --espacio-5: 4rem;
 
-  /* Componentes */
   --radio-card: 20px;
   --radio-pill: 999px;
   --sombra: 0 10px 30px rgba(3, 5, 25, 0.45);
   --ancho-max: 1120px;
 }
 
-/* ---------- 2. BASE ---------- */
 *,
 *::before,
 *::after {
@@ -56,7 +45,7 @@ body {
   line-height: 1.65;
   color: var(--texto);
   background-color: var(--noche);
-  /* Campo de estrellas + resplandores de nebulosa */
+
   background-image:
     radial-gradient(1.5px 1.5px at 12% 18%, #fff 50%, transparent 51%),
     radial-gradient(1px 1px at 68% 42%, #cfd6ff 50%, transparent 51%),
@@ -114,7 +103,6 @@ img { max-width: 100%; display: block; }
 }
 .saltar:focus { top: 1rem; }
 
-/* ---------- 3. ESTRUCTURA GENERAL CON CSS GRID (grid-template-areas) ---------- */
 .pagina {
   display: grid;
   min-height: 100vh;
@@ -147,7 +135,6 @@ img { max-width: 100%; display: block; }
 
 .seccion { padding-block: var(--espacio-4); }
 
-/* ---------- 4. ENCABEZADO Y NAVEGACIÓN (Flexbox) ---------- */
 .encabezado {
   position: sticky;
   top: 0;
@@ -242,7 +229,6 @@ img { max-width: 100%; display: block; }
   color: var(--sol);
 }
 
-/* ---------- 5. BOTONES ---------- */
 .boton {
   display: inline-block;
   padding: 0.7rem 1.4rem;
@@ -269,7 +255,6 @@ img { max-width: 100%; display: block; }
 
 .acciones { display: flex; flex-wrap: wrap; gap: var(--espacio-2); margin-top: var(--espacio-3); }
 
-/* ---------- 6. HÉROE + SISTEMA SOLAR ANIMADO ---------- */
 .hero {
   display: grid;
   gap: var(--espacio-4);
@@ -329,7 +314,6 @@ img { max-width: 100%; display: block; }
   to { transform: rotate(360deg); }
 }
 
-/* ---------- 7. TARJETAS DE SECCIONES (Grid + Flexbox) ---------- */
 .rejilla-tarjetas {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -377,7 +361,6 @@ img { max-width: 100%; display: block; }
 }
 .banda p { color: var(--texto-suave); }
 
-/* ---------- 8. FIGURAS, VIDEO Y CRÉDITOS ---------- */
 figure { margin: 0; }
 figcaption {
   margin-top: 0.5rem;
@@ -416,7 +399,6 @@ figcaption {
   align-items: center;
 }
 
-/* ---------- 9. LATERAL (aside) ---------- */
 .lateral {
   width: min(var(--ancho-max), 100% - 2rem);
   margin: 0 auto var(--espacio-4);
@@ -432,7 +414,6 @@ figcaption {
 .dato p { margin-bottom: var(--espacio-2); font-size: 0.98rem; }
 .dato p:last-child { margin-bottom: 0; }
 
-/* ---------- 10. LISTAS DE FICHA, TABLAS Y ETAPAS ---------- */
 .ficha {
   display: grid;
   gap: 0.75rem;
@@ -531,7 +512,6 @@ tbody tr:hover { background: rgba(141, 123, 255, 0.12); }
 
 .volver { margin-top: var(--espacio-4); }
 
-/* ---------- 11. PLANETAS Y SATÉLITES (generados con JS) ---------- */
 .controles {
   display: flex;
   flex-wrap: wrap;
@@ -655,7 +635,6 @@ textarea:focus {
   color: var(--texto);
 }
 
-/* Ventana modal */
 .modal {
   width: min(600px, 92vw);
   max-height: 90vh;
@@ -689,7 +668,6 @@ textarea:focus {
 .modal-contenido .ficha dd { font-size: 1rem; }
 .modal-cerrar { display: flex; justify-content: flex-end; margin: 0; }
 
-/* ---------- 12. TRIVIA ---------- */
 .trivia {
   max-width: 760px;
   margin-inline: auto;
@@ -747,7 +725,6 @@ textarea:focus {
   line-height: 1;
 }
 
-/* ---------- 13. FORMULARIO (Flexbox) ---------- */
 .formulario {
   display: flex;
   flex-direction: column;
@@ -812,7 +789,6 @@ input[type="checkbox"] {
 .resumen-error[hidden],
 .formulario[hidden] { display: none; }
 
-/* ---------- 14. PIE DE PÁGINA ---------- */
 .pie {
   margin-top: var(--espacio-4);
   padding: var(--espacio-4) 0;
@@ -847,11 +823,6 @@ input[type="checkbox"] {
 }
 .redes a:hover { background: var(--sol); color: var(--noche); }
 
-/* =========================================================
-   MEDIA QUERIES (Mobile-First)
-   ========================================================= */
-
-/* Tablet */
 @media (min-width: 768px) {
   .hero { grid-template-columns: 1.1fr 1fr; }
   .dos-columnas { grid-template-columns: 1fr 1fr; }
@@ -861,7 +832,6 @@ input[type="checkbox"] {
   .etapas li { padding-left: 4.5rem; }
 }
 
-/* Laptop y escritorio: aparece la barra lateral y el menú horizontal */
 @media (min-width: 960px) {
   .menu-boton { display: none; }
   .menu {
@@ -898,7 +868,6 @@ input[type="checkbox"] {
   .modal-contenido .ficha { grid-template-columns: 1fr 1fr; }
 }
 
-/* Respeto por quienes prefieren menos movimiento */
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   *,
@@ -911,5 +880,4 @@ input[type="checkbox"] {
   .orbita { animation: none; }
 }
 
-/* El atributo hidden siempre debe ocultar, aunque el elemento tenga display propio */
 [hidden] { display: none !important; }

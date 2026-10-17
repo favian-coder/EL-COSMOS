@@ -1,8 +1,3 @@
-// =========================================================
-// COSMOS · Script común a todas las páginas
-// Abre y cierra el menú de navegación en pantallas pequeñas
-// =========================================================
-
 const botonMenu = document.getElementById("menu-boton");
 const menu = document.getElementById("menu-principal");
 
@@ -14,12 +9,10 @@ function alternarMenu(abrir) {
 
 botonMenu.addEventListener("click", () => alternarMenu());
 
-// Cerrar con la tecla Escape
 document.addEventListener("keydown", (evento) => {
   if (evento.key === "Escape") alternarMenu(false);
 });
 
-// Cerrar al elegir un enlace
 menu.addEventListener("click", (evento) => {
   if (evento.target.closest("a")) alternarMenu(false);
 });
